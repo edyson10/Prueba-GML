@@ -1,0 +1,132 @@
+/* Fuente y colores base */
+.search-container {
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #333;
+}
+
+/* Contenedor principal */
+.search-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  padding: 16px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones New y Export */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.new-button,
+.export-button,
+.advanced-search-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.new-button,
+.advanced-search-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.new-button:hover {
+  background-color: #0069d9;
+}
+
+.export-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.export-button:hover {
+  background-color: #0069d9;
+}
+
+/* Sección de búsqueda */
+.search-section {
+  display: flex;
+  flex-grow: 1;
+  gap: 10px;
+  min-width: 300px;
+}
+
+.search-input-container {
+  display: flex;
+  flex-grow: 1;
+}
+
+.search-input {
+  flex-grow: 1;
+  padding: 8px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px 0 0 4px;
+  font-size: 14px;
+  height: 36px;
+  box-sizing: border-box;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+}
+
+.search-button {
+  padding: 8px 16px;
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+  font-size: 14px;
+  cursor: pointer;
+  height: 36px;
+}
+
+.search-button:hover {
+  background-color: #e2e6ea;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .search-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .action-buttons {
+    width: 100%;
+  }
+
+  .new-button,
+  .export-button {
+    flex-grow: 1;
+  }
+
+  .search-section {
+    flex-direction: column;
+  }
+
+  .search-input-container {
+    width: 100%;
+  }
+
+  .advanced-search-button {
+    align-self: flex-end;
+    margin-top: 8px;
+  }
+}

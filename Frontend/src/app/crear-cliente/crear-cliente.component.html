@@ -1,0 +1,36 @@
+<div class="search-container">
+  <div class="col-12">
+    <div class="row">
+      <div class="action-buttons" (click)="openModal()">
+        <button class="new-button">
+          <mat-icon aria-hidden="false" fontIcon="add"></mat-icon>New
+        </button>
+        <button class="export-button">
+          <mat-icon aria-hidden="false" fontIcon="shared"></mat-icon>
+          Export
+        </button>
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="search-section">
+        <div class="search-input-container">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Enter shared key"
+          />
+          <button class="search-button">Search</button>
+        </div>
+        <button class="advanced-search-button">Advanced Search</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-cliente-modal
+    *ngIf="showModal"
+    (closeModal)="closeModal()">
+</app-cliente-modal>
+
+

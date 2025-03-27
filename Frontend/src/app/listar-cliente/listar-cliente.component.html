@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="header">
+    <h2>Clientes</h2>
+  </div>
+
+  <div class="table-responsive">
+    <table class="client-table">
+      <thead>
+        <tr>
+          <th>Shared Key</th>
+          <th>Business ID</th>
+          <th>E-mail</th>
+          <th>Phone</th>
+          <th>Data Added</th>
+          <th><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="edit"></mat-icon></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let client of clients">
+          <td>{{ client.sharedKey }}</td>
+          <td>{{ client.businessId }}</td>
+          <td>{{ client.email }}</td>
+          <td>{{ client.phone }}</td>
+          <td>{{ client.dateAdded | date : "dd/MM/yyyy" }}</td>
+          <th><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="edit"></mat-icon></th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -32,7 +32,7 @@ public class ClienteController {
         return ResponseEntity.ok(clientService.crearCliente(clienteDTO));
     }
 
-    @GetMapping(path = "/listar",consumes = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(path = "/listar", produces = MediaType.APPLICATION_JSON_VALUE)
     @Operation(summary = "Lista los clientes", description = "Devuelve una lista de todos los clientes registrados.")
     public ResponseEntity<List<Cliente>> getAllClients() {
         return ResponseEntity.ok(clientService.listarClientes());
