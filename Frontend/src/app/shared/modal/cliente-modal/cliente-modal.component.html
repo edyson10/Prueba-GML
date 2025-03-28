@@ -6,7 +6,15 @@
     </div>
 
     <div class="modal-body">
-      <form [formGroup]="clientForm">
+      <!-- Mensajes de estado -->
+      <div *ngIf="errorMessage" class="alert alert-error">
+        {{ errorMessage }}
+      </div>
+
+      <div *ngIf="successMessage" class="alert alert-success">
+        {{ successMessage }}
+      </div>
+      <form [formGroup]="clientForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
           <label for="name">Name</label>
           <input
@@ -53,13 +61,15 @@
           <button
             type="button"
             class="cancel-button"
-            (click)="closeModal.emit()">
+            (click)="closeModal.emit()"
+          >
             Cancel
           </button>
           <button
             type="submit"
             class="save-button"
-            [disabled]="clientForm.invalid">
+            [disabled]="clientForm.invalid"
+          >
             Save
           </button>
         </div>

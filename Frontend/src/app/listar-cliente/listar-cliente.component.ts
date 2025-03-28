@@ -23,8 +23,19 @@ export class ListarClienteComponent {
         this.clients = data 
         console.log(this.clients)
       },
-      error => console.error('Error loading clients', error)
+      error => console.error('Error al cargar los clientes.', error)
     );
+  }
+
+  getClientsForExport(): any[] {
+    return this.clients.map(client => ({
+      'Shared Key': client.sharedKey,
+      'Business ID': client.businessId,
+      'Email': client.email,
+      'Phone': client.phone,
+      'Start Date': client.startDate,
+      'End Date': client.endDate
+    }));
   }
 
 }

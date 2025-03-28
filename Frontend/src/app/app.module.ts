@@ -13,13 +13,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ClienteModalComponent } from './shared/modal/cliente-modal/cliente-modal.component';
+import { MenuComponent } from './shared/modal/menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CrearClienteComponent,
     ListarClienteComponent,
-    ClienteModalComponent
+    ClienteModalComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
